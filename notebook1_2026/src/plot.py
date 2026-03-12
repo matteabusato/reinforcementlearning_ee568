@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as colors
 from matplotlib.colors import ListedColormap
 import numpy as np
-import os
 
 def add_arrow(pi, shape, mode):
     if mode == "single":
@@ -175,7 +174,6 @@ def plot_lines(list_to_plot, list_name, axis_label, folder, title, x_axis = None
     if show:
         plt.show()
     else:
-        os.makedirs('../plot/'+folder, exist_ok=True)
         plt.savefig('../plot/'+folder+title+'.png')
         plt.savefig('../plot/'+folder+title+'.pdf')
 
